@@ -28,6 +28,9 @@ export default function MonsterList({ monsters, loadingMonsters }) {
     return map[size?.toLowerCase()] || size;
   };
 
+  // Formateador de CR a fracciones estándar de D&D
+  const formatCR = (cr) => ({ 0.125: '1/8', 0.25: '1/4', 0.5: '1/2' }[cr] ?? cr);
+
   useEffect(() => {
     if (!monsters || monsters.length === 0) return;
 
@@ -76,7 +79,6 @@ export default function MonsterList({ monsters, loadingMonsters }) {
     const matchesSearch = m.name.toLowerCase().includes(search.toLowerCase());
     const details = detailedMonsters[m.index];
 
-    // Filtro estricto: si hay filtros activos y los detalles aún no cargan, se ocultan temporalmente para evitar falsos positivos
     if ((selectedType !== 'all' || selectedSize !== 'all') && !details) {
       return false;
     }
@@ -109,16 +111,16 @@ export default function MonsterList({ monsters, loadingMonsters }) {
           />
         </div>
 
-        {/* Dos filtros con todas las opciones solicitadas incluyendo fey, ooze y plant */}
+        {/* Filtros de Tipo y Tamaño (Sin 'capitalize' en el select de tipo para unificar estilos) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-[#333333]">
           <div>
             <label className="block text-xs font-bold text-slate-300 uppercase mb-1">Filtrar por Tipo</label>
             <select 
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
-              className="w-full bg-[#121212] border border-[#333333] px-3 py-2 rounded-lg text-sm text-slate-300 focus:outline-none capitalize"
+              className="w-full bg-[#121212] border border-[#333333] px-3 py-2 rounded-lg text-sm text-slate-300 focus:outline-none"
             >
-              <option value="all">Todos los Tipos</option>
+              <option value="all">Todos los tipos</option>
               <option value="aberration">Aberración</option>
               <option value="beast">Bestia</option>
               <option value="celestial">Celestial</option>
@@ -143,7 +145,7 @@ export default function MonsterList({ monsters, loadingMonsters }) {
               onChange={(e) => setSelectedSize(e.target.value)}
               className="w-full bg-[#121212] border border-[#333333] px-3 py-2 rounded-lg text-sm text-slate-300 focus:outline-none"
             >
-              <option value="all">Todos los Tamaños</option>
+              <option value="all">Todos los tamaños</option>
               <option value="tiny">Minúsculo</option>
               <option value="small">Pequeño</option>
               <option value="medium">Mediano</option>
@@ -163,13 +165,12 @@ export default function MonsterList({ monsters, loadingMonsters }) {
             const details = detailedMonsters[monster.index];
             const armorClass = details ? (Array.isArray(details.armor_class) ? details.armor_class[0]?.value : details.armor_class) : null;
             
-            // Pasamos las estadísticas por props a la tarjeta genérica
             const statsProps = details ? [
               { label: 'Tipo', value: translateType(details.type) },
               { label: 'Tamaño', value: translateSize(details.size) },
               { label: 'CA', value: armorClass || 'N/A' },
               { label: 'PG', value: details.hit_points || 'N/A' },
-              { label: 'CR', value: details.challenge_rating ?? 'N/A' }
+              { label: 'CR', value: formatCR(details.challenge_rating) }
             ] : [];
 
             return (

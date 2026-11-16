@@ -8,7 +8,7 @@ Taller práctico individual de *Desarrollo de Aplicaciones Multiplataforma* (Ing
 
 | Recurso | Enlace |
 | --- | --- |
-| Aplicación web (Vercel) | https://TU-PROYECTO.vercel.app |
+| Aplicación web (Vercel) | https://tallerweb3ercorte.vercel.app |
 | APK de Android (GitHub Releases) | https://github.com/TU-USUARIO/TU-REPOSITORIO/releases/tag/v1.0.0 |
 
 ## Módulos

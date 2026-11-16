@@ -168,11 +168,11 @@ export default function LootGenerator() {
               onChange={(e) => setCr(e.target.value)}
               className="w-full bg-[#121212] border border-[#333333] px-4 py-2 rounded-lg text-sm text-slate-300 focus:outline-none"
             >
-              <option value="1">CR 0 - 1 (Bajo - Equipo estándar y monedas)</option>
+              <option value="1">CR 0 - 1 (Bajo)</option>
               <option value="4">CR 2 - 4 (Moderado)</option>
-              <option value="8">CR 5 - 10 (Alto - Posibilidad de Objeto Mágico)</option>
+              <option value="8">CR 5 - 10 (Alto)</option>
               <option value="12">CR 11 - 16 (Épico)</option>
-              <option value="18">CR 17+ (Legendario - Múltiples objetos mágicos)</option>
+              <option value="18">CR 17+ (Legendario)</option>
             </select>
           </div>
           <button

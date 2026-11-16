@@ -87,8 +87,8 @@ export default function DiceRoller() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-[#121212] p-3 rounded-lg border border-[#333333]">
           <span className="text-xs font-bold text-slate-300 uppercase">Personalizar Color de los Dados:</span>
           
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-2">
               {BRIGHT_COLORS.map((c) => (
                 <button
                   key={c.name}

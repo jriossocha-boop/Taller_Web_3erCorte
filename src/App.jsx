@@ -23,10 +23,10 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#121212] text-slate-100 flex flex-col justify-between font-sans">
+    <div className="min-h-screen bg-[#121212] text-slate-100 flex flex-col justify-between font-sans overflow-x-clip">
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-6 py-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-8">
         {activeTab === 'bestiary' && (
           <MonsterList 
             monsters={monsters}

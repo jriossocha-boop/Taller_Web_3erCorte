@@ -31,15 +31,15 @@ export default function Navbar({ activeTab, setActiveTab }) {
 
   return (
     <nav className="bg-[#121212] border-b border-[#262626] sticky top-0 z-40 shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
         <span className="text-2xl font-bold text-white tracking-wide">DM Assistant 5e</span>
         
-        <div className="flex gap-2 bg-[#1a1a1a] p-1.5 rounded-lg border border-[#333333]">
+        <div className="flex w-full sm:w-auto gap-1 sm:gap-2 bg-[#1a1a1a] p-1.5 rounded-lg border border-[#333333]">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition ${
+              className={`flex flex-1 sm:flex-none min-w-0 items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-4 py-2 rounded-md text-xs sm:text-sm text-center font-medium transition ${
                 activeTab === tab.id 
                   ? 'bg-[#a1472b] text-white shadow' 
                   : 'text-slate-300 hover:text-white hover:bg-[#262626]'
