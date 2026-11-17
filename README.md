@@ -38,8 +38,8 @@ Taller práctico individual de *Desarrollo de Aplicaciones Multiplataforma* (Ing
 - [React](https://react.dev/) + [Vite](https://vite.dev/)
 - JavaScript y CSS con [Tailwind CSS](https://tailwindcss.com/)
 - [CapacitorJS](https://capacitorjs.com/) (`@capacitor/core`, `@capacitor/cli`, `@capacitor/android`)
-- API pública [dnd5eapi.co](https://www.dnd5eapi.co/api/) (sin autenticación)
-- Despliegue en [Vercel](https://vercel.com/) y empaquetado con Android Studio
+- API pública [dnd5eapi.co](https://www.dnd5eapi.co/api/) 
+- Despliegue en [Vercel](https://tallerweb3ercorte.vercel.app) y empaquetado con Android Studio
 
 ## Estructura del proyecto
 
@@ -62,8 +62,8 @@ android/              # Proyecto nativo generado con Capacitor
 Requisitos: [Node.js](https://nodejs.org/) 18 o superior.
 
 ```bash
-git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
-cd TU-REPOSITORIO
+git clone hhttps://github.com/jriossocha-boop/Taller_Web_3erCorte.git
+cd my-app
 npm install
 npm run dev
 ```
