@@ -130,7 +130,7 @@ export default function LootGenerator() {
           }
 
           if (resolvedDesc.length === 0) {
-            resolvedDesc = [`Este objeto (${item.name}) pertenece a la categoría de ${classification.type.toLowerCase()}; útil para las travesías de aventureros.`];
+            resolvedDesc = [`${item.name}: objeto de equipo estándar, útil para las travesías de los aventureros.`];
           }
 
           return {
