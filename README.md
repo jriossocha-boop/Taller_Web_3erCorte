@@ -9,7 +9,8 @@ Taller práctico individual de *Desarrollo de Aplicaciones Multiplataforma* (Ing
 | Recurso | Enlace |
 | --- | --- |
 | Aplicación web (Vercel) | https://tallerweb3ercorte.vercel.app |
-| APK de Android (GitHub Releases) | https://github.com/TU-USUARIO/TU-REPOSITORIO/releases/tag/v1.0.0 |
+| APK de Android (GitHub Releases) | https://github.com/jriossocha-boop/Taller_Web_3erCorte/releases/tag/v1.0.0 |
+|Descarga directa: [DM-Assistant-v1.0.0.apk] |(https://github.com/jriossocha-boop/Taller_Web_3erCorte/releases/download/v1.0.0/DM-Assistant-v1.0.0.apk) |
 
 ## Módulos
 
